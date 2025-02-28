@@ -1,0 +1,189 @@
+/* Topbar Container */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #407f60;
+    height: 70px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: block;
+  }
+  
+  /* Right Side (Notifications & User) */
+  .topbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Notification Button */
+  .notif-btn {
+    background-color: white;
+    border: none;
+    position: relative;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .notif-btn i {
+    color: black;
+    font-size: 20px;
+  }
+  
+  .notif-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 6px;
+  }
+  
+  /* User Profile Section */
+  .user-profile {
+    position: relative;
+    margin-left: 15px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .user-info:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .user-icon {
+    transition: 0.3s;
+  }
+  
+  .user-name {
+    font-weight: 600;
+    margin-left: 8px;
+  }
+  
+  .dropdown-icon {
+    margin-left: 5px;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 150px;
+    padding: 5px 0;
+    z-index: 1000;
+  }
+  
+  .dropdown-item {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .logout {
+    color: red;
+  }
+  
+  .logout:hover {
+    background-color: #f8d7da;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 720px) {
+    .user-name,
+    .dropdown-icon {
+      display: none;
+    }
+    
+    .hamburger {
+      font-size: 22px;
+    }
+  
+    .notif-btn {
+      padding: 6px;
+    }
+  
+    .user-info {
+      padding: 3px;
+    }
+  
+    .dropdown-menu {
+      min-width: 120px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .hamburger {
+      font-size: 20px;
+    }
+  
+    .notif-btn i {
+      font-size: 18px;
+    }
+  
+    .dropdown-menu {
+      min-width: 100px;
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .hamburger {
+      font-size: 18px;
+    }
+  
+    .notif-btn {
+      padding: 5px;
+    }
+  
+    .dropdown-menu {
+      font-size: 11px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .hamburger {
+      font-size: 16px;
+    }
+  
+    .notif-btn {
+      padding: 4px;
+    }
+  
+    .dropdown-menu {
+      right: -10px;
+    }
+  }
+  

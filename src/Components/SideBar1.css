@@ -1,0 +1,106 @@
+ /* Sidebar.css */
+ .sidebar {
+    width: 240px;
+    height: 100vh;
+    background: linear-gradient(145deg, #496989,  ); /* Gradient background */
+    color: white;
+    position: fixed;
+    top: 70px;
+    left: -240px;
+    transition: left 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  .sidebar-content ul li .icon-link a {
+    color: black !important; /* Change text color to black */
+    text-decoration: none; /* Optional: Remove underline */
+  }
+  
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebar-content {
+    padding-top: 0px;
+  }
+  
+  .sidebar-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-content ul li {
+    margin: 10px 0;
+  }
+  .sidebar-content.icon-link{
+    color:black;
+  }
+  
+  .sidebar-content ul li .icon-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(86, 134, 15);
+  
+    font-size: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: rgba(226, 10, 10, 0.1); /* Semi-transparent background */
+  }
+  
+  .sidebar-content ul li .icon-link:hover {
+    /* background: rgba(255, 255, 255, 0.2); Lighten background on hover */
+    transform: translateX(10px); /* Move slightly to the right */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  .sidebar-content ul li .icon-link:active {
+    background: #251abc; /* Highlight color when clicked */
+  }
+  
+  .sidebar-content ul li .icon-link .icon {
+    margin-right: 12px; /* Space between icon and text */
+    font-size: 20px; /* Icon size */
+    color: #1abc9c; /* Icon color */
+  }
+  
+  /* Hamburger Icon */
+  /* .hamburger {
+    position: fixed;
+    top: 7px;
+    left: 210px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001; 
+
+   
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  } */
+  
+  .hamburger:hover {
+   
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .sidebar {
+      left: -240px;
+      z-index: 1000;
+    }
+  
+    .sidebar.open {
+      left: 0;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }

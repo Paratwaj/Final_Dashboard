@@ -1,0 +1,141 @@
+.leave-management-container {
+    margin-bottom: 240px;
+    background-color: black;
+  }
+  
+  @media (max-width: 1024px) {
+    .addbtn {
+      margin-left:85% !important;
+      /* color:black; */
+    }
+  }
+  /* @media (max-width: 768px) {
+    .custom-container{
+      margin-left:240px !important;
+      max-Width: "calc(100% - 240px)" ;
+      
+    }
+  } */
+  /* @media (max-width:768px){
+    .containerr{
+      margin-top: 50%;
+    }
+    .addbtn{
+      margin-left:300px;
+    }
+    .conta{
+      max-width: 425px;
+    }
+  } */
+   @media (max-width: 768px) {
+    .addbtn {
+      margin-left: 75% !important;
+    }
+  
+    .table-responsive {
+      display: block;
+      width: 100%;
+    }
+  
+    /* Ensure the table header is on top */
+    .table-responsive table {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    /* Keep the header fixed on top */
+    .table-responsive thead {
+      display: flex;
+      flex-direction: row;
+      background: #343a40;
+      color: white;
+      position: relative;
+      z-index: 1; /* Ensures the header stays above the body */
+    }
+  
+    /* Table body should be placed below the header */
+    .table-responsive tbody {
+      display: flex;
+      flex-direction: column;
+      order: 2; /* Ensures tbody is placed below thead */
+      width: 100%;
+      margin-right: 20px;
+    }
+  
+    /* Ensure each row stays row-wise */
+    .table-responsive tr {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border: 1px solid #ddd;
+      padding: 10px;
+      background: #fff;
+    }
+  
+    .table-responsive td,
+    .table-responsive th {
+      flex: 1;
+      text-align: center;
+      padding: 8px;
+      border-right: 1px solid #ddd;
+      /* margin-right: 20px; */
+    }
+  
+    .table-responsive td:last-child,
+    .table-responsive th:last-child {
+      border-right: none;
+    }
+  
+    /* Ensure table header and body appear correctly */
+    .table-responsive thead tr {
+      display: flex;
+      width: 100%;
+    }
+  
+    .table-responsive tbody tr {
+      display: flex;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 880px) {
+    .leave-management-container {
+        padding: 10px;
+    }
+  
+    .enquiry-list-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+  
+    .enquiry-list-table th,
+    .enquiry-list-table td {
+        font-size: 14px;
+        padding: 5px;
+    }
+  
+    .add-leave-btn {
+        width: 100%;
+        text-align: center;
+    }
+  }
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  
+  @media screen and (max-width: 920px) {
+    .table-container {
+        width: 100%;
+        overflow-x: auto; /* Enables horizontal scrolling */
+        white-space: nowrap; /* Prevents text wrapping */
+    }
+  
+    .enquiry-list-table {
+        min-width: 900px; /* Ensures table doesn’t shrink too much */
+    }
+  }
+  
