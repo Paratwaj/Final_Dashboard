@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import DataTable from "react-data-table-component";
 import { motion, AnimatePresence } from "framer-motion";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Leavemanagement.css";
+import "./leavemanagement.css";
+import { MyContext } from "../context/context"; // Import the context
 
 const LeaveManagement = () => {
   const [leaves, setLeaves] = useState([
@@ -17,6 +18,10 @@ const LeaveManagement = () => {
       status: "Pending",
     },
   ]);
+
+  const { isOpen } = useContext(MyContext); // Get the sidebar state
+
+  const sidebarWidth = isOpen ? 240 : 0;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -80,7 +85,7 @@ const LeaveManagement = () => {
           className="btn btn-sm btn-danger"
         >
           Delete
-        </button> 
+        </button>
       ),
       ignoreRowClick: true,
       allowOverflow: true,
@@ -91,23 +96,22 @@ const LeaveManagement = () => {
   return (
     <motion.div
       className="container-fluid mt-4"
-      style={{ padding: "10px" }}
+      style={{
+        marginLeft: `${sidebarWidth}px`,
+        width: `calc(100% - ${sidebarWidth}px)`,
+        transition: "margin-left 0.3s ease, width 0.3s ease",
+      }}
+      // style={{ padding: "10px" }}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div
-        className="card shadow-lg p-4"
-        style={{
-          marginLeft: window.innerWidth > 1024 ? "240px" : "0px",
-          maxWidth: window.innerWidth > 1024 ? "calc(100% - 240px)" : "100%",
-        }}
-      >
-        <h2 className="text-primary mb-4">
+      <div className="shadow-lg p-3 p-md-4">
+        <h2 className="text-primary levh mb-4">
           <i className="bi bi-calendar-check"></i> Leave Management
         </h2>
         <button
-          className="btn btn-sm btn-primary addbtn mb-3"
+          className="btn btn-sm btn-success addbtn mb-3"
           onClick={() => setShowPopup(true)}
           style={{ width: "120px", marginLeft: "90%" }}
         >
@@ -116,7 +120,7 @@ const LeaveManagement = () => {
 
         {/* React DataTable */}
         <DataTable
-          title="Enquiry List"
+          title="Leave List"
           columns={columns}
           data={leaves}
           pagination

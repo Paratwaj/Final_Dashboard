@@ -1,141 +1,234 @@
 .leave-management-container {
-    margin-bottom: 240px;
-    background-color: black;
+  margin-bottom: 240px;
+  background-color: black;
+}
+/* .addbtn{
+background-color: rgb(10, 51, 10) !important;
+} */
+
+
+
+/* Adjust Add Button on smaller screens */
+@media (max-width: 1024px) {
+  .addbtn {
+    margin-left: 85% !important;
   }
-  
-  @media (max-width: 1024px) {
+}
+@media (max-width: 768px) {
+  .addbtn {
+    margin-left: 75% !important;
+  }
+}
+@media screen and (max-width: 720px) {
+  .addbtn {
+    margin-left: 70% !important;
+  }
+}
+@media screen and (max-width: 655px) {
+  .addbtn {
+    margin-left: 40% !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  .addbtn {
+    margin-left: 20% !important;
+  }
+}
+
+/* Remove unnecessary table styles */
+.table-responsive {
+  overflow-x: auto !important;
+}
+
+/* Remove unused flex styles for tables */
+
+.card {
+  margin-left: 240px; /* Default margin when sidebar is visible */
+  max-width: calc(100% - 240px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* When screen width is below 1024px (Sidebar disappears) */
+
+
+
+@media (max-width: 1020px) {
+  .card {
+    margin-left: 10px !important;
+    max-width: 100% !important;
+  }
+  .addbtn {
+    margin-right: 10% !important;
+  }
+}
+@media (max-width: 1080px) {
+
+  .addbtn {
+    margin-left: 85% !important;
+  }
+}
+@media (max-width: 710px) {
+
+  .addbtn {
+    margin-left: 80% !important;
+  }
+}
+@media (max-width: 550px) {
+
+  .addbtn {
+    margin-left: 70% !important;
+  }
+}
+@media (max-width: 400px) {
+
+  .addbtn {
+    margin-left: 35% !important;
+  }
+}
+@media (max-width: 295px) {
+
+  .addbtn {
+    margin-left: 15% !important;
+  }
+}
+@media (max-width: 320px) {
+
+  .addbtn {
+    margin-left: 25% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerr {
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+
+  }
+  .position-relative{
+    display:none;
+  }
+
+  .containerr .bg-white {
+    width: 90% !important;
+    max-width: 400px !important;
+    margin: auto !important;
+  }
+}
+@media (max-width: 2000px) {
+  .containerr {
+    /* margin-left:240px !important; */
+
+  }
+  .addbtn {
+    margin-left: 10% !important;
+  }
+}
+  @media (max-width: 1310px) {
     .addbtn {
-      margin-left:85% !important;
-      /* color:black; */
+      margin-left: 88% !important;
     }
   }
-  /* @media (max-width: 768px) {
-    .custom-container{
-      margin-left:240px !important;
-      max-Width: "calc(100% - 240px)" ;
-      
-    }
-  } */
-  /* @media (max-width:768px){
-    .containerr{
-      margin-top: 50%;
-    }
-    .addbtn{
-      margin-left:300px;
-    }
-    .conta{
-      max-width: 425px;
-    }
-  } */
-   @media (max-width: 768px) {
+  @media (max-width: 1130px) {
     .addbtn {
-      margin-left: 75% !important;
-    }
-  
-    .table-responsive {
-      display: block;
-      width: 100%;
-    }
-  
-    /* Ensure the table header is on top */
-    .table-responsive table {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    /* Keep the header fixed on top */
-    .table-responsive thead {
-      display: flex;
-      flex-direction: row;
-      background: #343a40;
-      color: white;
-      position: relative;
-      z-index: 1; /* Ensures the header stays above the body */
-    }
-  
-    /* Table body should be placed below the header */
-    .table-responsive tbody {
-      display: flex;
-      flex-direction: column;
-      order: 2; /* Ensures tbody is placed below thead */
-      width: 100%;
-      margin-right: 20px;
-    }
-  
-    /* Ensure each row stays row-wise */
-    .table-responsive tr {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      border: 1px solid #ddd;
-      padding: 10px;
-      background: #fff;
-    }
-  
-    .table-responsive td,
-    .table-responsive th {
-      flex: 1;
-      text-align: center;
-      padding: 8px;
-      border-right: 1px solid #ddd;
-      /* margin-right: 20px; */
-    }
-  
-    .table-responsive td:last-child,
-    .table-responsive th:last-child {
-      border-right: none;
-    }
-  
-    /* Ensure table header and body appear correctly */
-    .table-responsive thead tr {
-      display: flex;
-      width: 100%;
-    }
-  
-    .table-responsive tbody tr {
-      display: flex;
-      width: 100%;
+      margin-left: 85% !important;
     }
   }
-  @media screen and (max-width: 880px) {
-    .leave-management-container {
-        padding: 10px;
-    }
-  
-    .enquiry-list-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-  
-    .enquiry-list-table th,
-    .enquiry-list-table td {
-        font-size: 14px;
-        padding: 5px;
-    }
-  
-    .add-leave-btn {
-        width: 100%;
-        text-align: center;
+  @media (max-width: 740px) {
+    .addbtn {
+      margin-left: 80% !important;
     }
   }
-  .action-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  
-  @media screen and (max-width: 920px) {
-    .table-container {
-        width: 100%;
-        overflow-x: auto; /* Enables horizontal scrolling */
-        white-space: nowrap; /* Prevents text wrapping */
-    }
-  
-    .enquiry-list-table {
-        min-width: 900px; /* Ensures table doesn’t shrink too much */
+  @media (max-width: 560px) {
+    .addbtn {
+      margin-left: 70% !important;
     }
   }
+  @media (min-width: 560px) {
+    .addbtn {
+      margin-left: 50% !important;
+    }
+  }
+  @media (max-width: 2560px) {
+    .containerr {
+      /* margin-left:240px !important; */
+  
+    }
+    .addbtn {
+      margin-left: 95% !important;
+    }
+  }
+  @media (max-width: 2270px) {
+ 
+    .addbtn {
+      margin-left: 93% !important;
+    }
+  }
+  @media (max-width: 1700px) {
+ 
+    .addbtn {
+      margin-left: 90% !important;
+    }
+  }
+  @media (max-width: 1350px) {
+ 
+    .addbtn {
+      margin-left: 85% !important;
+    }
+  }
+  @media (max-width: 425px) {
+ 
+    .addbtn {
+      margin-left: 35% !important;
+    }
+  }
+
+  @media (max-width: 262px) {
+ 
+    .addbtn {
+      margin-left: 21% !important;
+    }
+  }
+  @media (max-width: 735px) {
+ 
+    .addbtn {
+      margin-left: 80% !important;
+    }
+  }
+  @media (max-width: 565px) {
+ 
+    .addbtn {
+      margin-left: 70% !important;
+    }
+  }
+  @media (max-width: 400px) {
+ 
+    .addbtn {
+      margin-left: 37% !important;
+    }
+  }
+  @media (max-width: 277px) {
+ 
+    .addbtn {
+      margin-left: 20% !important;
+    }
+  }
+  @media (max-width: 1075px) {
+    .containerr {
+      /* margin-left:240px !important; */
+  
+    }
+  }
+  @media (max-width: 320px) {
+ 
+    .addbtn {
+      margin-left: 30% !important;
+    }
+  }
+
   
