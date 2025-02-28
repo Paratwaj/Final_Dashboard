@@ -1,4 +1,4 @@
-@media (max-width: 2560px) {
+/* @media (max-width: 2560px) {
     .content{
        margin-left: 250px;
     }
@@ -17,4 +17,44 @@
     .content{
        margin: 0;
     }
-}
+} */
+
+/* Employe.css */
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .container-fluid {
+      margin-left: 0 !important; /* On smaller screens, ignore sidebar width */
+      width: 100% !important;
+    }
+  
+    .navbar-brand {
+      font-size: 1rem; /* Adjust navbar brand size for smaller screens */
+    }
+  
+    .form-control-lg {
+      font-size: 0.9rem; /* Adjust search bar font size for smaller screens */
+    }
+  }
+
+  /* Employe.css */
+@media (max-width: 768px) {
+    .actions-button {
+      width: 100%; /* Full width on smaller screens */
+      margin-bottom: 0.5rem; /* Add spacing between stacked buttons */
+    }
+  }
+
+  /* Employe.css */
+.actions-button {
+    min-width: 80px; /* Set a minimum width for the buttons */
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding: 0.25rem 0.5rem; /* Adjust padding for better spacing */
+  }

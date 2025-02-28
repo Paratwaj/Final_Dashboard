@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { FaUserAlt } from "react-icons/fa";
 import { useContext } from "react";
-import { MyContext } from "../context/context";
+import { MyContext } from "../context/Context";
 import "./Topbar.css";
 
 const Topbar = () => {
