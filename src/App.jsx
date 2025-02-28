@@ -7,15 +7,17 @@ import Project from "./Components/Project";
 import SideBar1 from "./Components/SideBar1";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Enquiry from "./Components/Enquiry";
-import { MyProvider } from "./context/Context";
+import { MyProvider } from "./context/context";
 import LeaveManagement from "./Components/Leavemanagement";
 import Payment from "./Components/Payment";
+import CustomCursor from "./Components/Customcursor";
 
 function App() {
   return (
     <>
       <MyProvider>
         <BrowserRouter>
+        <CustomCursor />
           <SideBar1 />
           <Topbar />
           <Routes>
